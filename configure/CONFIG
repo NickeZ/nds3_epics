@@ -27,3 +27,6 @@ ifdef T_A
  -include $(TOP)/configure/CONFIG_SITE.$(EPICS_HOST_ARCH).$(T_A)
 endif
 
+ifneq (${COVERAGE},)
+    PROD_SYS_LIBS += gcov
+endif
